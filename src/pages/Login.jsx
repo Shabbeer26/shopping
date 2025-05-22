@@ -3,7 +3,7 @@ import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'; // Scoped CSS
-import { auth } from '../firebase';
+
 
 
 const Login = () => {

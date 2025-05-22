@@ -1,0 +1,126 @@
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple to Blue gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login-page .login-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeInCard 0.8s ease forwards;
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+.login-page .login-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+  animation: popIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-page input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f8f9fa;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.login-page input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 6px rgba(37, 117, 252, 0.4);
+  outline: none;
+}
+
+.login-page button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #2575fc;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-page button:hover {
+  background-color: #1e5bd8;
+}
+
+.login-page .google-btn {
+  background-color: #db4437;
+}
+
+.login-page .google-btn:hover {
+  background-color: #c13527;
+}
+
+.login-page .signup-text {
+  margin-top: 16px;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+
+.login-page .signup-text a {
+  color: #2575fc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-page .signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInCard {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-page .login-container {
+    padding: 20px;
+  }
+
+  .login-page .login-title {
+    font-size: 1.5rem;
+  }
+}
